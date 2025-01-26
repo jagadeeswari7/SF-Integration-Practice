@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Account Details" icon-name="standard:account">
+        <!-- Display record form if user has record access -->
+        <template if:true={hasAccountRecordAccess}>
+            <lightning-record-form
+                record-id={recordId}
+                object-api-name={objectApiName}
+                layout-type="Full"
+                density="Comfy"
+                mode={displayMode}
+                columns="2"
+                onsuccess={handleSuccess}
+                onerror={handleError}>
+            </lightning-record-form>
+        </template>
+
+        <!-- Display error message if user lacks record access -->
+        <template if:false={hasAccountRecordAccess}> 
+            <p class="slds-p-around_medium slds-text-color_error checkRecordAccess">
+                Insufficient privileges to open the page; please contact the administrator.
+            </p> 
+        </template>
+        
+    </lightning-card>
+</template>

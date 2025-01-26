@@ -1,0 +1,19 @@
+{
+  "packageDirectories": [
+    {
+      "path": "force-app",
+      "default": true,
+      "package": "highnetworthclient",
+      "versionName": "ver 1.0",
+      "versionNumber": "1.1.0.NEXT",
+      "versionDescription": "My High Net Worth Clients Package"
+    }
+  ],
+  "name": "IntegrationPractice",
+  "namespace": "",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "61.0",
+  "packageAliases": {
+    "highnetworthclient": "0HodL0000000de5SAA"
+  }
+}
